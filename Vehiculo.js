@@ -38,10 +38,61 @@ class Vehiculo{
         return this.#peso;
     }
 
+    encender(){
+        console.log("la moto se enta encendiendo");
+    }
+
+    apagar(){
+        console.log("la moto se esta apagando");
+    }
+
+    mostrarDatos(){
+        console.log("El modelo es" + this.#modelo);
+        console.log("El año es" + this.#año);
+        console.log("El color es" + this.#color);
+        console.log("El peso es" + this.#peso);
+    }
+
+    //cambiar UML mostrarDatos
+
 
 
 }
 
 class Motocicleta extends Vehiculo{
+    #cilindrada;
+    #marca;
 
-}
+    constructor (modelo, año, color, peso, cilindrada,marca){
+
+        super (modelo, año, color, peso);
+        this.#cilindrada=cilindrada;
+        this.#marca=marca;
+    }
+
+    
+    setMarca(marca){
+        this.#marca = marca;
+    }
+    getMarca(){
+        return this.#marca;
+    }
+
+    setCilindrada(cilindrada){
+        this.#cilindrada = cilindrada;
+    }
+    getCilindrada(){
+        return this.#cilindrada;
+    }
+    mostrarDatos(){
+        super.mostrarDatos();
+        console.log("la marca es" + this.#marca);
+        console.log("el cilindrado es" + this.#cilindrada);
+    }
+
+    }
+
+const moto1 = new Motocicleta("ford k", 1998, "rojo", 600, "500cc", "Ford")
+console.log("Desscricion del vehiculo:");
+moto1.mostrarDatos();
+
