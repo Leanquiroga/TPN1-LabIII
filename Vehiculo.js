@@ -1,3 +1,8 @@
+/**
+ * Integrantes: 
+ * QUIROGA, Leandro Ivan
+ * MARTINEZ, Ignacio
+ */
 class Vehiculo{
     #modelo;
     #año;
