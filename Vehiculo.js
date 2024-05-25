@@ -39,21 +39,20 @@ class Vehiculo{
     }
 
     encender(){
-        console.log("la moto se enta encendiendo");
+        console.log("el vehiculo se esta encendiendo");
     }
 
     apagar(){
-        console.log("la moto se esta apagando");
+        console.log("el vehiculo se esta apagando");
     }
 
     mostrarDatos(){
-        console.log("El modelo es" + this.#modelo);
-        console.log("El año es" + this.#año);
-        console.log("El color es" + this.#color);
-        console.log("El peso es" + this.#peso);
+        console.log("El modelo es: " + this.#modelo);
+        console.log("El año es: " + this.#año);
+        console.log("El color es: " + this.#color);
+        console.log("El peso es: " + this.#peso);
     }
 
-    //cambiar UML mostrarDatos
 
 
 
@@ -64,10 +63,9 @@ class Motocicleta extends Vehiculo{
     #marca;
 
     constructor (modelo, año, color, peso, cilindrada,marca){
-
         super (modelo, año, color, peso);
-        this.#cilindrada=cilindrada;
-        this.#marca=marca;
+        this.#cilindrada = cilindrada;
+        this.#marca = marca;
     }
 
     
@@ -86,13 +84,18 @@ class Motocicleta extends Vehiculo{
     }
     mostrarDatos(){
         super.mostrarDatos();
-        console.log("la marca es" + this.#marca);
-        console.log("el cilindrado es" + this.#cilindrada);
+        console.log("la marca es: " + this.#marca);
+        console.log("el cilindrado es: " + this.#cilindrada);
     }
 
-    }
+}
+
+const v1 = new Vehiculo();
+v1.encender();
 
 const moto1 = new Motocicleta("ford k", 1998, "rojo", 600, "500cc", "Ford")
-console.log("Desscricion del vehiculo:");
+console.log("Descripcion del vehiculo: ");
 moto1.mostrarDatos();
+
+v1.apagar();
 
